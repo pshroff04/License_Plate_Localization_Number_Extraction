@@ -1,0 +1,300 @@
+Detection weights: ./modified_weights.pth
+Is GPU available: True
+DataParallel(
+  (module): fh02(
+    (wR2): DataParallel(
+      (module): wR2(
+        (features): Sequential(
+          (0): Sequential(
+            (0): Conv2d(3, 48, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+            (1): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+            (3): MaxPool2d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+            (4): Dropout(p=0.2)
+          )
+          (1): Sequential(
+            (0): Conv2d(48, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+            (3): MaxPool2d(kernel_size=2, stride=1, padding=1, dilation=1, ceil_mode=False)
+            (4): Dropout(p=0.2)
+          )
+          (2): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+            (3): MaxPool2d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+            (4): Dropout(p=0.2)
+          )
+          (3): Sequential(
+            (0): Conv2d(128, 160, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+            (1): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+            (3): MaxPool2d(kernel_size=2, stride=1, padding=1, dilation=1, ceil_mode=False)
+            (4): Dropout(p=0.2)
+          )
+          (4): Sequential(
+            (0): Conv2d(160, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+            (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+            (3): MaxPool2d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+            (4): Dropout(p=0.2)
+          )
+          (5): Sequential(
+            (0): Conv2d(192, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+            (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+            (3): MaxPool2d(kernel_size=2, stride=1, padding=1, dilation=1, ceil_mode=False)
+            (4): Dropout(p=0.2)
+          )
+          (6): Sequential(
+            (0): Conv2d(192, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+            (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+            (3): MaxPool2d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+            (4): Dropout(p=0.2)
+          )
+          (7): Sequential(
+            (0): Conv2d(192, 192, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+            (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+            (3): MaxPool2d(kernel_size=2, stride=1, padding=1, dilation=1, ceil_mode=False)
+            (4): Dropout(p=0.2)
+          )
+          (8): Sequential(
+            (0): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+            (3): MaxPool2d(kernel_size=2, stride=2, padding=1, dilation=1, ceil_mode=False)
+            (4): Dropout(p=0.2)
+          )
+          (9): Sequential(
+            (0): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+            (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+            (3): MaxPool2d(kernel_size=2, stride=1, padding=1, dilation=1, ceil_mode=False)
+            (4): Dropout(p=0.2)
+          )
+        )
+        (classifier): Sequential(
+          (0): Linear(in_features=23232, out_features=100, bias=True)
+          (1): Linear(in_features=100, out_features=100, bias=True)
+          (2): Linear(in_features=100, out_features=4, bias=True)
+        )
+      )
+    )
+    (rnn): Sequential(
+      (0): BidirectionalLSTM(
+        (rnn): LSTM(416, 256, batch_first=True, bidirectional=True)
+        (embedding): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (1): BidirectionalLSTM(
+        (rnn): LSTM(256, 256, batch_first=True, bidirectional=True)
+        (embedding): Linear(in_features=512, out_features=69, bias=True)
+      )
+    )
+  )
+)
+Total number of training images: 166434
+Trained 128 images, use 18.30404233932495 seconds, Average loss 71.07364654541016
+
+Trained 12928 images, use 148.52713012695312 seconds, Average loss 6.271899900814094
+
+Trained 25728 images, use 260.4729833602905 seconds, Average loss 4.715643815140226
+
+Trained 38528 images, use 368.8678195476532 seconds, Average loss 4.046652048529184
+
+Trained 51328 images, use 477.2172050476074 seconds, Average loss 3.6853943382415393
+
+Trained 64128 images, use 585.3411552906036 seconds, Average loss 3.4617364249543514
+
+Trained 76928 images, use 693.5500538349152 seconds, Average loss 3.307692160820604
+
+Trained 89728 images, use 801.736673116684 seconds, Average loss 3.194511122778377
+
+Trained 102528 images, use 909.6846051216125 seconds, Average loss 3.1062830098708174
+
+Trained 115328 images, use 1017.7089583873749 seconds, Average loss 3.033433114251868
+
+Trained 128128 images, use 1125.753398180008 seconds, Average loss 2.9672459684290016
+
+Trained 140928 images, use 1234.0357081890106 seconds, Average loss 2.9031664255421123
+
+Trained 153728 images, use 1341.8997509479523 seconds, Average loss 2.837113735181505
+
+===========
+Epoch: 0 completed. Avg loss: 2.7616696479687324 startTime: 1449.1222429275513
+
+===========
+/scratch/user/prateek.shroff/.conda/envs/pytorchv1.0/lib/python3.6/site-packages/torch/nn/modules/rnn.py:179: RuntimeWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
+  self.dropout, self.training, self.bidirectional, self.batch_first)
+rsim_preds: 皖皖aa---------------------------------------------------6------------------------------------------------------------------------, sim_preds 皖a6 and YI is ['皖AC6V77']
+rsim_preds: 皖皖a-----------------------------------------------------------------------------------------------------------------------------, sim_preds 皖a and YI is ['皖ARW200']
+rsim_preds: 皖-------------------------------------------------------------------------------------------------------------------------------, sim_preds 皖 and YI is ['皖MFW129']
+rsim_preds: 皖皖aaa--------------------------------------------------6------------------------------------------------------------------------, sim_preds 皖a6 and YI is ['皖AW6X81']
+rsim_preds: 皖aaa----------------------------------------------------------------------------------------------------------------------------, sim_preds 皖a and YI is ['皖ARZ124']
+rsim_preds: 皖皖aa----------------------------------------------------------------------------------------------------------------------------, sim_preds 皖a and YI is ['皖AY592B']
+rsim_preds: 皖皖aa----------------------------------------------------------------------------------------------------------------------------, sim_preds 皖a and YI is ['皖AY0R93']
+rsim_preds: 皖皖aa----------------------------------------------------------------------------------------------------------------------------, sim_preds 皖a and YI is ['皖A73364']
+rsim_preds: 皖皖aa-------------------------------------------------------------------------------------6--------------------------------------, sim_preds 皖a6 and YI is ['皖A87680']
+rsim_preds: 皖皖aa----------------------------------------------------------------------------------------------------------------------------, sim_preds 皖a and YI is ['皖AYG417']
+Trained 128 images, use 3.998964786529541 seconds, Average loss 1.7077946662902832
+
+Trained 12928 images, use 112.20040488243103 seconds, Average loss 1.5331578467151907
+
+Trained 25728 images, use 220.3700773715973 seconds, Average loss 1.409355178994326
+
+Trained 38528 images, use 328.05353713035583 seconds, Average loss 1.2852661779948644
+
+Trained 51328 images, use 435.5812523365021 seconds, Average loss 1.172797993085628
+
+Trained 64128 images, use 544.2028596401215 seconds, Average loss 1.0699314344191029
+
+Trained 76928 images, use 654.6339416503906 seconds, Average loss 1.0056781857065273
+
+Trained 89728 images, use 764.8615865707397 seconds, Average loss 0.9343662944312783
+
+Trained 102528 images, use 876.0605843067169 seconds, Average loss 0.8739414775788263
+
+Trained 115328 images, use 988.9994552135468 seconds, Average loss 0.8208704149551053
+
+Trained 128128 images, use 1102.6756074428558 seconds, Average loss 0.7748324089533799
+
+Trained 140928 images, use 1216.0571730136871 seconds, Average loss 0.7329014162249613
+
+Trained 153728 images, use 1326.7955195903778 seconds, Average loss 0.6965750153986838
+
+===========
+Epoch: 1 completed. Avg loss: 0.6659975322851768 startTime: 1435.6425998210907
+
+===========
+rsim_preds: 皖皖aac------------------------------------------------------------------6---------------vv------------------77----------------77-, sim_preds 皖ac6v77 and YI is ['皖AC6V77']
+rsim_preds: 皖aaayy---------------------------------------------------------------g------------------44---------------11-----------------77--, sim_preds 皖ayg417 and YI is ['皖AYG417']
+rsim_preds: 皖aa-------------------------------------------------88----------------77-----------------6-----------------88--------------00---, sim_preds 皖a87680 and YI is ['皖A87680']
+rsim_preds: 皖aarr---------------------------------------------------------------ww-------------------2----------------00---------------00---, sim_preds 皖arw200 and YI is ['皖ARW200']
+rsim_preds: 皖m--ff---------------------------------------------------------------w------------------7-----------------2-----------------99--, sim_preds 皖mfw729 and YI is ['皖MFW129']
+rsim_preds: 皖aaah------------------------------------------------------------------z----------------11------------------2---------------1---, sim_preds 皖ahz121 and YI is ['皖ARZ124']
+rsim_preds: 皖aaaa------------------------------------------------77----------------33----------------3-----------------66---------------44--, sim_preds 皖a73364 and YI is ['皖A73364']
+rsim_preds: 皖aaayy----------------------------------------------------------------55-----------------9----------------22---------------b----, sim_preds 皖ay592b and YI is ['皖AY592B']
+rsim_preds: 皖aaayy---------------------------------------------------------------00---------------rr------------------99----------------33--, sim_preds 皖ay0r93 and YI is ['皖AY0R93']
+rsim_preds: 皖aaaaw-----------------------------------------------------------------66--------------xx------------------8---------------11---, sim_preds 皖aw6x81 and YI is ['皖AW6X81']
+Trained 128 images, use 4.188233852386475 seconds, Average loss 0.2720136046409607
+
+Trained 12928 images, use 115.3570191860199 seconds, Average loss 0.23709293550784044
+
+Trained 25728 images, use 226.07611298561096 seconds, Average loss 0.22499826216875618
+
+Trained 38528 images, use 337.3031632900238 seconds, Average loss 0.21394981728538723
+
+Trained 51328 images, use 450.7282202243805 seconds, Average loss 0.20913694611288366
+
+Trained 64128 images, use 563.2135007381439 seconds, Average loss 0.20072230017054343
+
+Trained 76928 images, use 675.156229019165 seconds, Average loss 0.19509963999919208
+
+Trained 89728 images, use 788.4255928993225 seconds, Average loss 0.192129762415454
+
+Trained 102528 images, use 901.307149887085 seconds, Average loss 0.1869238695773888
+
+Trained 115328 images, use 1014.5603148937225 seconds, Average loss 0.18206364780532136
+
+Trained 128128 images, use 1127.4456770420074 seconds, Average loss 0.17811702831939502
+
+Trained 140928 images, use 1240.6946806907654 seconds, Average loss 0.17491743628351825
+
+Trained 153728 images, use 1353.5518276691437 seconds, Average loss 0.17153925521238758
+
+===========
+Epoch: 2 completed. Avg loss: 0.16905159264802933 startTime: 1465.1237936019897
+
+===========
+rsim_preds: 皖aa-------------------------------------------------88----------------77-----------------6-----------------8----------------0---, sim_preds 皖a87680 and YI is ['皖A87680']
+rsim_preds: 皖aaaay---------------------------------------------------------------00----------------r------------------99----------------33--, sim_preds 皖ay0r93 and YI is ['皖AY0R93']
+rsim_preds: 皖m--ff---------------------------------------------------------------w------------------1-----------------22----------------99--, sim_preds 皖mfw129 and YI is ['皖MFW129']
+rsim_preds: 皖aaa-w-----------------------------------------------------------------6----------------x------------------8----------------1---, sim_preds 皖aw6x81 and YI is ['皖AW6X81']
+rsim_preds: 皖aa--y----------------------------------------------------------------55----------------99-----------------2---------------b----, sim_preds 皖ay592b and YI is ['皖AY592B']
+rsim_preds: 皖aa-b------------------------------------------------------------------z----------------11-----------------2-----------------1--, sim_preds 皖abz121 and YI is ['皖ARZ124']
+rsim_preds: 皖aaayy---------------------------------------------------------------g------------------44----------------1-----------------77--, sim_preds 皖ayg417 and YI is ['皖AYG417']
+rsim_preds: 皖aaac-----------------------------------------------------------------66----------------v------------------77----------------77-, sim_preds 皖ac6v77 and YI is ['皖AC6V77']
+rsim_preds: 皖aa--------------------------------------------------77----------------3-----------------3-----------------6----------------44--, sim_preds 皖a73364 and YI is ['皖A73364']
+rsim_preds: 皖aaar---------------------------------------------------------------ww------------------22----------------0-----------------0---, sim_preds 皖arw200 and YI is ['皖ARW200']
+Trained 128 images, use 3.976536989212036 seconds, Average loss 0.15645618736743927
+
+Trained 12928 images, use 110.95878100395203 seconds, Average loss 0.1325412216310454
+
+Trained 25728 images, use 218.38148188591003 seconds, Average loss 0.1296739184960204
+
+Trained 38528 images, use 328.15458941459656 seconds, Average loss 0.13349965479583836
+
+Trained 51328 images, use 439.02564001083374 seconds, Average loss 0.13313100916191825
+
+Trained 64128 images, use 549.2253706455231 seconds, Average loss 0.1297685704277661
+
+Trained 76928 images, use 659.6929981708527 seconds, Average loss 0.12839951519908605
+
+Trained 89728 images, use 769.9283547401428 seconds, Average loss 0.12610037117856376
+
+Trained 102528 images, use 880.6108102798462 seconds, Average loss 0.12365700242187498
+
+Trained 115328 images, use 990.719042301178 seconds, Average loss 0.12192306315296896
+
+Trained 128128 images, use 1101.0444550514221 seconds, Average loss 0.12074296042829245
+
+Trained 140928 images, use 1211.1149752140045 seconds, Average loss 0.11957591302780862
+
+Trained 153728 images, use 1321.810849905014 seconds, Average loss 0.11853403581320296
+
+===========
+Epoch: 3 completed. Avg loss: 0.11750748981076937 startTime: 1431.2793345451355
+
+===========
+rsim_preds: 皖aaa--w----------------------------------------------------------------6----------------xx-----------------8----------------11--, sim_preds 皖aw6x81 and YI is ['皖AW6X81']
+rsim_preds: 皖aaa-c-----------------------------------------------------------------6----------------vv------------------7----------------77-, sim_preds 皖ac6v77 and YI is ['皖AC6V77']
+rsim_preds: 皖aaa-y----------------------------------------------------------------0----------------rr------------------9-----------------3--, sim_preds 皖ay0r93 and YI is ['皖AY0R93']
+rsim_preds: 皖m---f---------------------------------------------------------------ww-----------------1------------------2-----------------9--, sim_preds 皖mfw129 and YI is ['皖MFW129']
+rsim_preds: 皖aaa--y---------------------------------------------------------------55-----------------9-----------------2---------------bb---, sim_preds 皖ay592b and YI is ['皖AY592B']
+rsim_preds: 皖aa-------------------------------------------------88-----------------7-----------------6-----------------8----------------0---, sim_preds 皖a87680 and YI is ['皖A87680']
+rsim_preds: 皖aa--b-----------------------------------------------------------------z-----------------1------------------2----------------4--, sim_preds 皖abz124 and YI is ['皖ARZ124']
+rsim_preds: 皖aaa-y---------------------------------------------------------------gg-----------------44----------------1-----------------77--, sim_preds 皖ayg417 and YI is ['皖AYG417']
+rsim_preds: 皖aa--------------------------------------------------7-----------------3-----------------3-----------------6-----------------4--, sim_preds 皖a73364 and YI is ['皖A73364']
+rsim_preds: 皖aa-r----------------------------------------------------------------w-------------------2----------------00----------------0---, sim_preds 皖arw200 and YI is ['皖ARW200']
+Trained 128 images, use 4.0005388259887695 seconds, Average loss 0.12864936888217926
+
+Trained 12928 images, use 117.33553338050842 seconds, Average loss 0.10107083788307586
+
+Trained 25728 images, use 232.12609672546387 seconds, Average loss 0.10174295013371985
+
+Trained 38528 images, use 346.6820662021637 seconds, Average loss 0.10288352946258858
+
+Trained 51328 images, use 461.15806245803833 seconds, Average loss 0.10213534271070487
+
+Trained 64128 images, use 575.9107916355133 seconds, Average loss 0.1015458548601397
+
+Trained 76928 images, use 689.5182695388794 seconds, Average loss 0.10137829479580115
+
+Trained 89728 images, use 801.4087913036346 seconds, Average loss 0.10203905337717326
+
+Trained 102528 images, use 912.876608133316 seconds, Average loss 0.10217363438039981
+
+Trained 115328 images, use 1023.1089799404144 seconds, Average loss 0.10179830969339206
+
+Trained 128128 images, use 1134.4806878566742 seconds, Average loss 0.10211631511296188
+
+Trained 140928 images, use 1245.2070615291595 seconds, Average loss 0.10286525750260371
+
+Trained 153728 images, use 1358.2177267074585 seconds, Average loss 0.10251183901835142
+
+===========
+Epoch: 4 completed. Avg loss: 0.101966210896006 startTime: 1470.3463718891144
+
+===========
+rsim_preds: 皖aa--y-----------------------------------------------------------------g----------------44----------------1-----------------7---, sim_preds 皖ayg417 and YI is ['皖AYG417']
+rsim_preds: 皖aaa-y-----------------------------------------------------------------0---------------rr------------------9-----------------3--, sim_preds 皖ay0r93 and YI is ['皖AY0R93']
+rsim_preds: 皖aa--------------------------------------------------8-----------------7-----------------6-----------------8----------------0---, sim_preds 皖a87680 and YI is ['皖A87680']
+rsim_preds: 皖aa--c-----------------------------------------------------------------6----------------vv------------------7----------------77-, sim_preds 皖ac6v77 and YI is ['皖AC6V77']
+rsim_preds: 皖aaa--w----------------------------------------------------------------6-----------------x-----------------8----------------11--, sim_preds 皖aw6x81 and YI is ['皖AW6X81']
+rsim_preds: 皖aa---------------------------------------------------7----------------33----------------3-----------------6-----------------4--, sim_preds 皖a73364 and YI is ['皖A73364']
+rsim_preds: 皖a---r-----------------------------------------------------------------z-----------------1-----------------2-----------------4--, sim_preds 皖arz124 and YI is ['皖ARZ124']
+rsim_preds: 皖m---f----------------------------------------------------------------w------------------1-----------------2-----------------9--, sim_preds 皖mfw129 and YI is ['皖MFW129']
+rsim_preds: 皖aa-r----------------------------------------------------------------w-------------------2----------------0-----------------0---, sim_preds 皖arw200 and YI is ['皖ARW200']
+rsim_preds: 皖aa---y---------------------------------------------------------------55-----------------9-----------------2----------------b---, sim_preds 皖ay592b and YI is ['皖AY592B']
