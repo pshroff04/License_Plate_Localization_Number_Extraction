@@ -134,7 +134,7 @@ def predict():
     preds = preds.transpose(1, 0).contiguous().view(-1)
     preds_size = Variable(torch.IntTensor([preds.size(0)] * 1))
     sim_preds = converter.decode(preds.data, preds_size.data, raw=False)
-    print(sim_preds)
+    #print(sim_preds)
     [cx, cy, w, h] = fps_pred.data.cpu().numpy()[0].tolist()
     lx,ly = ((cx - w/2)*img.shape[1], (cy - h/2)*img.shape[0])
     rx,ry = ((cx + w/2)*img.shape[1], (cy + h/2)*img.shape[0])

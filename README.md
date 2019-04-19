@@ -1,7 +1,6 @@
 ﻿# Licence Plate Localization and Recognition 
 
-In this project, I tried to solve the problem of automatic detection of licence plate from given image and recognizing the licence number. The dataset used is CCPD[1]. 
-
+In this project, I tried to solve the problem of automatic detection of licence plate from given image and recognizing the licence number. The dataset used is CCPD (Chinese Car Parking Dataset). 
 
 
 ## Prerequisite
@@ -13,6 +12,9 @@ In this project, I tried to solve the problem of automatic detection of licence 
 
 ## Structure
 This repository is divided into two parts. First one is  *Train_Test* and another folder is *GUI* . Both of them can run independently. The *Train_Test* folder contains the code to train and test the network. The *GUI* folder is use to run the Tkinter based GUI which can be used to evaluate the result or demo purpose. 
+
+## Dataset
+The CCPD dataset can be downloaded from [here](https://drive.google.com/file/d/1fFqCXjhk7vE9yLklpJurEwP9vdLZmrJd/view).
 
 ## Train
 Make sure you are in *Train_Test* folder. First we have to train the detection module for a certain epochs (~100) so that it can converge. After that both modules can be trained end-to-end.
@@ -38,4 +40,4 @@ python GUI.py
 ```
 ## Demo
 
-Hit this to see the demo.
+Hit [this](https://www.youtube.com/watch?v=Jc53MyVG9Q0) to see the demo.
