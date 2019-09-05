@@ -1,4 +1,4 @@
-﻿# Licence Plate Localization and Recognition 
+﻿# License Plate Localization and License Number Extraction.  
 
 In this project, I tried to solve the problem of automatic detection of licence plate from given image and recognizing the licence number. The dataset used is CCPD (Chinese Car Parking Dataset). 
 
